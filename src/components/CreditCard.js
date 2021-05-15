@@ -19,12 +19,12 @@ function CreditCard(props) {
     Visa: '/img/visa.png',
     'Master Card': '/img/master-card.svg',
   };
-  const cardStyle = { backgroundColor: bgColor, color: color };
+  const cardStyle = { backgroundColor: bgColor, color: color, width: '20rem' };
 
   return (
     <div className="credit-card-container" style={cardStyle}>
       <div>
-        <img src={cardType[type]} />
+        <img style={{ width: '3rem' }} src={cardType[type]} />
       </div>
       <div>
         {'*'.repeat(12)} {digitsShow}

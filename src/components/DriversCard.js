@@ -1,5 +1,5 @@
 import React from 'react';
-import Rating from '../rating/Rating';
+import Rating from './Rating';
 
 function DriversCard(props) {
   const { name, rating, img, car } = props;
@@ -8,7 +8,7 @@ function DriversCard(props) {
   return (
     <div>
       <div>
-        <img src={img} alt={`${name}'s photo`} />
+        <img style={{ width: '5rem' }} src={img} alt={`${name}'s photo`} />
       </div>
       <div>
         <h4>{name}</h4>

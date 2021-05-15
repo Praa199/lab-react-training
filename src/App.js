@@ -2,14 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import IdCard from './components/id-card/IdCard';
-import Greetings from './components/greetings/Greetings';
-import Random from './components/random/Random';
-import BoxColor from './components/box-color/BoxColor';
-import CreditCard from './components/credit-card/CreditCard';
-import Rating from './components/rating/Rating';
-import DriversCard from './components/drivers-card/DriversCard';
-import LikeButton from './components/like-button/LikeButton';
+import IdCard from './components/IdCard';
+import Greetings from './components/Greetings';
+import Random from './components/Random';
+import BoxColor from './components/BoxColor';
+import CreditCard from './components/CreditCard';
+import Rating from './components/Rating';
+import DriversCard from './components/DriversCard';
+import LikeButton from './components/LikeButton';
+import ClickablePicture from './components/ClickablePicture';
+import Dice from './components/Dice';
+import Carousel from './components/Carousel';
 
 function App() {
   return (
@@ -129,6 +132,28 @@ function App() {
           <h1>LikeButton</h1>
           <LikeButton />
           <LikeButton />
+        </div>
+        <div>
+          <h1>ClickablePicture</h1>
+          <ClickablePicture
+            img="/img/persons/maxence.png"
+            imgClicked="/img/persons/maxence-glasses.png"
+          />
+        </div>
+        <div>
+          <h1>Dice</h1>
+          <Dice />
+        </div>
+        <div>
+          <h1>Carousel</h1>
+          <Carousel
+            imgs={[
+              'https://randomuser.me/api/portraits/women/1.jpg',
+              'https://randomuser.me/api/portraits/men/1.jpg',
+              'https://randomuser.me/api/portraits/women/2.jpg',
+              'https://randomuser.me/api/portraits/men/2.jpg',
+            ]}
+          />
         </div>
       </header>
     </div>
