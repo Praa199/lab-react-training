@@ -1,19 +1,28 @@
 import React from 'react';
-import './Random.css';
 
 function Random(props) {
-  let random;
-  let min = props.min;
-  let max = props.max;
-  random = Math.floor(Math.random() * max) + min;
+  const { min, max } = props;
 
   return (
     <div className="random-container">
       <p>
-        Random value between {props.min} and {props.max} => {random}
+        Random value between {min} and {max} {'=>'}{' '}
+        {Math.floor(Math.random() * max) + min}
       </p>
     </div>
   );
 }
 
 export default Random;
+
+// const {min, max} = props;
+
+// random = Math.floor(Math.random() * max) + min;
+
+// return (
+//   <div className="random-container">
+//     <p>
+//       Random value between {min} and {max} => {random}
+//     </p>
+//   </div>
+// );

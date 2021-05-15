@@ -7,18 +7,22 @@ import Greetings from './components/greetings/Greetings';
 import Random from './components/random/Random';
 import BoxColor from './components/box-color/BoxColor';
 import CreditCard from './components/credit-card/CreditCard';
+import Rating from './components/rating/Rating';
+import DriversCard from './components/drivers-card/DriversCard';
+import LikeButton from './components/like-button/LikeButton';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <div>
+          <h1>IdCard</h1>
           <IdCard
             lastName="Doe"
             firstName="John"
             gender="male"
             height={178}
-            // birth={new Date('1992-07-14')}
+            birth={new Date('1992-07-14')}
             picture="https://randomuser.me/api/portraits/men/44.jpg"
           />
 
@@ -32,6 +36,7 @@ function App() {
           />
         </div>
         <div>
+          <h1>Greetings</h1>
           <Greetings lang="de">Ludwig</Greetings>
           <Greetings lang="fr">François</Greetings>
           <Greetings lang="en">Chad</Greetings>
@@ -39,14 +44,17 @@ function App() {
           <Greetings lang="es">Aldo</Greetings>
         </div>
         <div>
+          <h1>Random</h1>
           <Random min={1} max={6} />
           <Random min={1} max={100} />
         </div>
         <div>
+          <h1>BoxColor</h1>
           <BoxColor r={255} g={0} b={0} />
           <BoxColor r={128} g={255} b={0} />
         </div>
         <div id="credit-card">
+          <h1>CreditCard</h1>
           <CreditCard
             type="Visa"
             number="0123456789018845"
@@ -86,6 +94,41 @@ function App() {
 
           <br />
           <br />
+        </div>
+        <div>
+          <h1>Rating</h1>
+          <Rating>0</Rating>
+          <Rating>1.49</Rating>
+          <Rating>1.5</Rating>
+          <Rating>3</Rating>
+          <Rating>4</Rating>
+          <Rating>5</Rating>
+        </div>
+        <div>
+          <h1>DriversCard</h1>
+          <DriversCard
+            name="Travis Kalanick"
+            rating={4.2}
+            img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+            car={{
+              model: 'Toyota Corolla Altis',
+              licensePlate: 'CO42DE',
+            }}
+          />
+          <DriversCard
+            name="Dara Khosrowshahi"
+            rating={4.9}
+            img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+            car={{
+              model: 'Audi A3',
+              licensePlate: 'BE33ER',
+            }}
+          />
+        </div>
+        <div>
+          <h1>LikeButton</h1>
+          <LikeButton />
+          <LikeButton />
         </div>
       </header>
     </div>

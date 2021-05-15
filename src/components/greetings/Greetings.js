@@ -1,26 +1,34 @@
 import React from 'react';
-import './Greetings.css';
+
+const greetings = {
+  fr: 'Salut',
+  en: 'Hello',
+  de: 'Hallo',
+  es: 'Hola',
+};
 
 function Greetings(props) {
   const { lang, children } = props;
-  let greeting = '';
-  switch (lang) {
-    case 'de':
-      greeting = `Hallo ${children}`;
-      break;
-    case 'en':
-      greeting = `Hello ${children}`;
-      break;
-    case 'es':
-      greeting = `Hola ${children}`;
-      break;
-    case 'fr':
-      greeting = `Bonjour ${children}`;
-      break;
-  }
+  // let greeting = '';
+  // switch (lang) {
+  //   case 'de':
+  //     greeting = `Hallo ${children}`;
+  //     break;
+  //   case 'en':
+  //     greeting = `Hello ${children}`;
+  //     break;
+  //   case 'es':
+  //     greeting = `Hola ${children}`;
+  //     break;
+  //   case 'fr':
+  //     greeting = `Bonjour ${children}`;
+  //     break;
+  // }
   return (
     <div className="greetings-container">
-      <p>{greeting}</p>
+      <p>
+        {greetings[lang]} {children}
+      </p>
     </div>
   );
 }
